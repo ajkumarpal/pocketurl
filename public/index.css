@@ -1,0 +1,90 @@
+/* Add CSS styles here! */
+body {
+  font-family: sans-serif;
+  background-image: url("https://i0.wp.com/mattwaldmanrsp.com/wp-content/uploads/2014/08/dots-new-by-dave-whyte.gif?ssl=1");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*  */
+}
+.form-conatiner {
+  /* height: 20px;
+  width: 400px; */
+  background-color: rgba(255, 255, 255, 0.13);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+  padding: 50px 35px;
+}
+
+
+body {
+  display: flex;
+  flex-flow: column;
+}
+
+
+
+.demo {
+  /*background-image:
+    linear-gradient(white, white),
+    linear-gradient(180deg, cornflowerblue, purple);*/
+
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.096), rgba(255, 255, 255, 0.068)),
+    linear-gradient(270deg, #00d7ba0e, #b85dd723 50%, #ffb36725 100%);
+
+  background-repeat: no-repeat;
+  background-origin: padding-box, border-box;
+  text-align: center;
+}
+
+.animated {
+  border-width: 5px;
+  border-style: dotted;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.192)),
+    linear-gradient(180deg, rgba(100, 148, 237, 0.116), #00000018 50%, rgba(100, 148, 237, 0.13));
+  background-repeat: no-repeat;
+  background-size: 100% 100%, 100% 200%;
+  background-position: 0 0, 0 100%;
+  background-origin: padding-box, border-box;
+  animation: highlight 1s infinite alternate;
+}
+
+@keyframes highlight {
+  100% {
+    background-position: 0 0, 0 0;
+  }
+}
+
+/* Bubble Right */
+.bubble-right {
+  display: inline-block;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px transparent;
+}
+.bubble-right:before {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  content: '';
+  border-style: solid;
+  transition-duration: 0.3s;
+  transition-property: right;
+  top: calc(50% - 10px);
+  right: 0;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #ececec;
+}
+.bubble-right:hover:before {
+  right: -10px;
+}
