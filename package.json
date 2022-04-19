@@ -1,5 +1,7 @@
 {
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "snowpack dev",
     "build": "snowpack build",
     "test": "echo \"This template does not include a test runner by default.\" && exit 1",
@@ -32,12 +34,14 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "gh-pages": "^3.2.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-tsparticles": "^2.0.6",
     "typewriter-effect": "^2.18.2"
   },
   "name": "aj-url-short",
+  "homepage": "http://ajkumarpal.github.io/pocketurl",
   "description": "> ✨ Bootstrapped with Create Snowpack App (CSA). Includes .env support, hotmodule replacement and prettier pre configured with husky.",
   "version": "1.0.1",
   "main": "postcss.config.js",
